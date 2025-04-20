@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Financial Portfolio Dashboard
 
-## Getting Started
+A modern, responsive dashboard for tracking financial portfolios, built with **Next.js**, **Tailwind CSS**, and **ShadCN UI**.
 
-First, run the development server:
+---
 
+## 🛍 Overview
+
+This dashboard gives you a comprehensive view of your investments:
+
+- 📉 Stock performance over time  
+- 📊 Portfolio sector breakdown  
+- 📋 Real-time holdings & recent activity  
+- 🌗 Dark and light mode support  
+- 📱 Fully responsive (mobile-friendly)
+
+---
+
+## ✨ Features
+
+- **Summary Cards** — Portfolio Value, Daily Change, Profit/Loss  
+- **Stock Performance Chart** — Line chart visualizing stock trends  
+- **Portfolio Allocation** — Pie chart for sector-based allocation  
+- **Stocks List** — Table showing current holdings  
+- **Recent Transactions** — Latest buy/sell history
+
+---
+
+## 🔧 Tech Stack
+
+- [**Next.js**](https://nextjs.org/) – React framework  
+- [**Tailwind CSS**](https://tailwindcss.com/) – Utility-first styling  
+- [**ShadCN/UI**](https://ui.shadcn.com) – Prebuilt accessible components  
+- [**Recharts**](https://recharts.org/) – Charting library  
+- [**next-themes**](https://github.com/pacocoursey/next-themes) – Theme switching
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repo**
+```bash
+git clone https://github.com/tosif121/financial-portfolio-dashboard.git
+cd financial-portfolio-dashboard
+```
+
+2. **Install dependencies**
+```bash
+npm install
+# or
+yarn install
+```
+
+3. **Start the dev server**
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Visit** `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🗂 Project Structure
 
-## Learn More
+```
+src/
+├── app/
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx                  # Main dashboard page
+│
+├── components/
+│   ├── dashboard/                # Dashboard components
+│   │   ├── Dashboard.tsx
+│   │   ├── Layout.tsx
+│   │   ├── PortfolioAllocation.tsx
+│   │   ├── RecentTransactions.tsx
+│   │   ├── StockPerformanceChart.tsx
+│   │   ├── StocksList.tsx
+│   │   ├── SummaryCard.tsx
+│   │   └── ThemeProvider.tsx
+│   │
+│   ├── layout/                   # Layout structure components
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── MobileHeader.tsx
+│   │   └── Sidebar.tsx
+│   │
+│   └── ui/                       # ShadCN UI components
+│       ├── avatar.tsx
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── dialog.tsx
+│       ├── dropdown-menu.tsx
+│       ├── input.tsx
+│       ├── separator.tsx
+│       ├── sheet.tsx
+│       ├── skeleton.tsx
+│       ├── tabs.tsx
+│       └── tooltip.tsx
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌗 Theme Support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Theme toggling via `next-themes`
+- Automatically respects system settings
+- Manual toggle available in the header
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📡 Data Integration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The app currently uses **sample/mock data**.
+
+To integrate real-time financial data:
+1. Connect to APIs like Alpha Vantage, IEX Cloud, or Yahoo Finance
+2. Replace static mock data in components
+3. Add periodic refresh or SWR hooks for live updates
+
+---
+
+## 📄 License
+
+[MIT License](LICENSE)
+
+---
+
+## 👨‍💻 Author
+
+**Tosif Raza**  
+GitHub: [@tosif121](https://github.com/tosif121)
+
+---
+
+## 🙌 Acknowledgements
+
+- [ShadCN/UI](https://ui.shadcn.com/)
+- [Recharts](https://recharts.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Next.js](https://nextjs.org/)
+
